@@ -1,0 +1,22 @@
+{
+    "name": "chemezov/i2crm-test",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Chemezov\\I2crmTest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mikhail Chemezov",
+            "email": "michlenanosoft@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.3",
+        "guzzlehttp/psr7": "3.0.x-dev",
+        "phpseclib/phpseclib": "dev-master"
+    }
+}
