@@ -30,8 +30,8 @@ php test_decrypt.php
 
 Выходные файлы появятся в директории /output от корня проекта.
 
-Ссылка на проект для проверки: https://github.com/chemezov/i2crm-check
-Ссылка на репозиторий с пакетом: https://github.com/chemezov/i2crm-contest 
+Ссылка на проект для проверки: https://github.com/chemezov/i2crm-check  
+Ссылка на репозиторий с пакетом: https://github.com/chemezov/i2crm-contest  
 Ссылка на пакет: https://packagist.org/packages/chemezov/i2crm-test
 
 ## Проблема с генерацией Sidecar
