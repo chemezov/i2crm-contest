@@ -1,5 +1,26 @@
 ## Запуск скриптов
 
+Создайте пустой проект:
+
+```shell
+composer init
+```
+
+Подключите пакет:
+
+```shell
+composer require chemezov/i2crm-test
+```
+
+Из этого пакета скопируйте в корень проекта:
+
+```shell
+output
+samples
+test_decrypt.php
+test_encrypt.php
+```
+
 В корневой директории:
 
 ```php
@@ -8,6 +29,10 @@ php test_decrypt.php
 ```
 
 Выходные файлы появятся в директории /output от корня проекта.
+
+Ссылка на проект для проверки: https://github.com/chemezov/i2crm-check
+Ссылка на репозиторий с пакетом: https://github.com/chemezov/i2crm-contest 
+Ссылка на пакет: https://packagist.org/packages/chemezov/i2crm-test
 
 ## Проблема с генерацией Sidecar
 
