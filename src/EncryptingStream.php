@@ -28,4 +28,31 @@ class EncryptingStream extends AbstractStream
 
         return $encryptedData . $mac;
     }
+
+    public function getSidecar(): string
+    {
+        $this->stream->rewind();
+        $sidecar = '';
+        $blockSize = 64 * 1024;
+        $chunkOffset = 0;
+
+        while ($chunkOffset < $this->stream->getSize()) {
+            $this->stream->seek($chunkOffset);
+
+            $chunk = $this->stream->read($blockSize + 16);
+
+            if (strlen($chunk) === 0) {
+                break;
+            }
+
+            $hmac = $this->hmac($chunk, $this->macKey);
+            $mac = substr($hmac, 0, 10);
+
+            $sidecar .= $mac;
+
+            $chunkOffset += $blockSize;
+        }
+
+        return $sidecar;
+    }
 }
